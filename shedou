@@ -63,7 +63,7 @@ local Window = WindUI:CreateWindow({
     ScrollBarEnabled = true,
 
     Background = "rbxassetid://16733302343"
-})
+})Window:SetToggleKey(Enum.KeyCode.Q)
 
 local InformationTab = Window:Tab({
     Title = "Information",
