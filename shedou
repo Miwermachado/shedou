@@ -26,6 +26,13 @@ WindUI:AddTheme({
     
     WindowTopbarButtonIcon = Color3.fromHex("a1a1aa"), -- Icon
     WindowTopbarTitle = Color3.fromHex("FFFFFF"), -- Text
+    WindowTopbarTitle = WindUI:Gradient({                                                      
+        ["0"] = { Color = Color3.fromHex("#00ff44"), Transparency = 0 },            
+        ["100"]   = { Color = Color3.fromHex("#0008ff"), Transparency = 0 },        
+    }, {                                                                            
+        Rotation = 0,                                                               
+    }),
+
     WindowTopbarAuthor = Color3.fromHex("FFFFFF"), -- Text
     WindowTopbarIcon = Color3.fromHex("FFFFFF"), -- Text
     
@@ -63,7 +70,10 @@ local Window = WindUI:CreateWindow({
     ScrollBarEnabled = true,
 
     Background = "rbxassetid://16733302343"
-})Window:SetToggleKey(Enum.KeyCode.Q)
+
+})
+Window:SetToggleKey(Enum.KeyCode.Q)
+Window:SetBackgroundImage("rbxassetid://6239939495")
 
 local InformationTab = Window:Tab({
     Title = "Information",
